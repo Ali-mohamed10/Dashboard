@@ -115,6 +115,7 @@
 .social-info input {
     padding: 10px;
     border: none;
+    max-width: 140px;
 }
 
 /*Widgets Control*/
