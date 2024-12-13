@@ -258,7 +258,7 @@ header .notification img {
 }
 @media (max-width: 767px) {
     .dashboard {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        display: block;
     }
 }
 .dashboard > div {
