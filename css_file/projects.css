@@ -1,0 +1,103 @@
+:root {
+    --hover-color: #f6f6f6;
+    --button-color: #1787e0;
+    --main-duration: 0.3s;
+    --section-BC: #ececec;
+    --p-color: #666;
+    --box-shadow: 10px 10px 15px #ddd;
+    --background: linear-gradient(to bottom, #33ccff , #ff99cc);
+    --hover-background: linear-gradient(to bottom,#209ac3 , #b56c90);
+    --color-project: #ff99cc;
+    --color-team: linear-gradient(to right, red, blue);
+    --color-1-team: red;
+    --color-2-team: blue;
+
+}
+
+/*Projects*/
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+@media (max-width: 767px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+.projects > div {
+    background-color: white;
+    padding: 20px;
+}
+.projects > div > span:first-of-type {
+    text-align: end;
+    margin: 0;
+}
+.projects > div img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 40px;
+    border: 2px solid white;
+}
+.projects > div img:not(:first-of-type) {
+    margin-left: -20px;
+}
+.projects > div .skills {
+    padding: 20px 0;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 10px;
+    border-bottom: 1px solid var(--button-color);
+    border-top: 1px solid var(--button-color);
+    font-size: 13px;
+}
+.projects > div .skills li {
+    padding: 5px;
+    background-color: var(--button-color);
+    color: white;
+}
+.projects > div > span:last-of-type {
+    text-align: end;
+    margin: 0;
+    margin-top: 20px;
+    position: relative;
+}
+.projects > div > span:last-of-type::before {
+    content: "";
+    width: 50%;
+    height: 8px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #6fc66f 80%, #ddd 80%);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.projects > div:first-of-type > span:last-of-type::before {
+    background-image: linear-gradient(to right, red 50%, #ddd 50%);
+}
+.projects > div:nth-of-type(3) > span:last-of-type::before {
+    background-image: none;
+    background-color: var(--button-color);
+}
+.projects > div:nth-of-type(4) > span:last-of-type::before {
+    background-image: linear-gradient(to right, #6fc66f 60%, #ddd 60%);
+}
+.projects > div:nth-of-type(5) > span:last-of-type::before {
+    background-image: linear-gradient(to right, #6fc66f 70%, #ddd 70%);
+}
+.projects > div:nth-of-type(6) > span:last-of-type::before {
+    background-image: linear-gradient(to right, red 40%, #ddd 40%);
+}
+.projects > div:nth-of-type(7) > span:last-of-type::before {
+    background-image: linear-gradient(to right, #6fc66f 70%, #ddd 70%);
+}
+.projects > div:nth-of-type(8) > span:last-of-type::before {
+    background-image: linear-gradient(to right, #6fc66f 60%, #ddd 60%);
+}
+.projects > div:last-of-type > span:last-of-type::before {
+    background-image: linear-gradient(to right, #6fc66f 90%, #ddd 90%);
+}

@@ -1,0 +1,184 @@
+:root {
+    --hover-color: #f6f6f6;
+    --button-color: #1787e0;
+    --main-duration: 0.3s;
+    --section-BC: #ececec;
+    --p-color: #666;
+    --box-shadow: 10px 10px 15px #ddd;
+    --background: linear-gradient(to bottom, #33ccff , #ff99cc);
+    --hover-background: linear-gradient(to bottom,#209ac3 , #b56c90);
+    --color-project: #ff99cc;
+    --color-team: linear-gradient(to right, red, blue);
+    --color-1-team: red;
+    --color-2-team: blue;
+
+}
+
+/*Overview*/
+/*avatar*/
+.profile .overview {
+    background-color: white;
+    padding: 20px;
+}
+.profile .overview {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+@media (max-width: 767px) {
+    .profile .overview {
+        display: block;
+    }
+}
+.profile .avatar {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--button-color);
+    border-radius: 0;
+}
+@media (max-width: 767px) {
+    .profile .avatar {
+        border-right: none;
+        border-bottom: 1px solid var(--button-color);
+    }
+}
+.profile .avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.profile .avatar span:first-of-type {
+    padding: 30px;
+    padding-top: 0;
+    position: relative;
+}
+.profile .avatar span:first-of-type::after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, var(--button-color) 70%, var(--section-BC) 70%);
+    border-radius: 5px;
+    width: 100%;
+    height: 6px;
+    bottom: 10px;
+    left: 0;
+}
+.profile .avatar i {
+    color: gold;
+}
+
+/*Data*/
+.profile .data > div {
+    transition: var(--main-duration);
+    padding: 15px;
+}
+.profile .data > div:hover {
+    background-color: var(--section-BC);
+}
+.profile .data > div > div {
+    display: flex;
+    column-gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--button-color);
+    border-radius: 0;
+    white-space: nowrap;
+    font-size: 14px;
+}
+@media (max-width: 999px) {
+    .profile .data > div > div {
+        flex-direction: column;
+    }
+}
+.profile .data .billing div {
+    border-bottom: none;
+}
+
+.profile .data > div > div * {
+    flex-basis: 20%;
+}
+.profile .data > div > div p span {
+    display: inline-block;
+}
+.profile label {
+    transform: translateY(-12px);
+}
+
+/*Skills*/
+.skills-activities {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+}
+@media (max-width: 991px) {
+    .skills-activities {
+        grid-template-columns: 1fr;
+    }
+}
+.skills-activities > div {
+    background-color: white;
+    padding: 20px;
+}
+.profile .skills-activities .skills > div {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--button-color);
+    border-radius: 0;
+}
+.profile .skills-activities .skills > div:last-of-type {
+    border-bottom: none;
+}
+.profile .skills-activities .skills > div ul {
+    display: flex;
+    gap: 10px;
+}
+@media (max-width: 991px) {
+    .profile .skills-activities .skills > div ul {
+        justify-content: center;
+    }
+}
+.profile .skills-activities .skills > div ul li {
+    padding: 5px;
+    color: white;
+    background-image: var(--background);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*Activities*/
+.profile .activities > div {
+    padding: 15px 0;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid var(--button-color);
+    border-radius: 0;
+}
+@media (max-width: 991px) {
+    .profile .activities > div {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.profile .activities > div:last-of-type {
+    border-bottom: none;
+}
+
+.profile .activities > div .time {
+    margin-left: auto;
+}
+@media (max-width: 991px) {
+    .profile .activities > div .text {
+        text-align: center;
+    }
+    .profile .activities > div .time {
+        margin: auto;
+        text-align: center;
+    }
+}
+.profile .activities div img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}

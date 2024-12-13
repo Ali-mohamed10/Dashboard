@@ -1,0 +1,117 @@
+:root {
+    --hover-color: #f6f6f6;
+    --button-color: #1787e0;
+    --main-duration: 0.3s;
+    --section-BC: #ececec;
+    --p-color: #666;
+    --box-shadow: 10px 10px 15px #ddd;
+    --background: linear-gradient(to bottom, #33ccff , #ff99cc);
+    --hover-background: linear-gradient(to bottom,#209ac3 , #b56c90);
+    --color-project: #ff99cc;
+    --color-team: linear-gradient(to right, red, blue);
+    --color-1-team: red;
+    --color-2-team: blue;
+
+}
+
+/*Plans*/
+.plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.plans > div {
+    flex-basis: 48%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 0;
+}
+@media (max-width: 767px) {
+    .plans > div {
+        flex-basis: 100%;
+    }
+}
+.plans > div .info {
+    background-color: #6dbd6d;
+    border: 4px solid white;
+    outline: 4px solid #6dbd6d;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 0;
+}
+.plans .basic .info {
+    background-color: var(--button-color);
+    border: 4px solid white;
+    outline: 4px solid var(--button-color);
+}
+.plans .premium .info {
+    background-color: goldenrod;
+    border: 4px solid white;
+    outline: 4px solid goldenrod;
+}
+.plans > div .info p {
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+.plans > div .info p::before {
+    content: "$";
+    position: absolute;
+    left: -15px;
+    top: -5px;
+    font-size: 20px;
+}
+.plans div ul {
+    margin-top: 20px;
+}
+.plans div ul li {
+    padding: 20px 0;
+    border-radius: 0;
+    border-bottom: 1px solid #6dbd6d;
+    position: relative;
+}
+.plans .basic ul li {
+    border-color: var(--button-color);
+}
+.plans .premium ul li {
+    border-color: goldenrod;
+}
+
+.plans div ul li::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f129";
+    font-weight: 900;
+    background-color: rgb(0 0 0 / 30%);
+    color: white;
+    padding: 5px 10px;
+    font-size: 9px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+.plans div ul i {
+    margin-right: 5px;
+}
+.plans div ul li .fa-check {
+    color: #6dbd6d;
+}
+.plans div ul .fa-xmark {
+    color: red;
+}
+.plans div a {
+    background-color: #6dbd6d;
+    margin-top: 20px;
+}
+.plans .basic a {
+    background-color: var(--button-color);
+}
+
+.plans .premium span {
+    text-align: center;
+    margin-top: 20px;
+}

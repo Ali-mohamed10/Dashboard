@@ -1,0 +1,116 @@
+:root {
+    --hover-color: #f6f6f6;
+    --button-color: #1787e0;
+    --main-duration: 0.3s;
+    --section-BC: #ececec;
+    --p-color: #666;
+    --box-shadow: 10px 10px 15px #ddd;
+    --background: linear-gradient(to bottom, #33ccff , #ff99cc);
+    --hover-background: linear-gradient(to bottom,#209ac3 , #b56c90);
+    --color-project: #ff99cc;
+    --color-team: linear-gradient(to right, red, blue);
+    --color-1-team: red;
+    --color-2-team: blue;
+
+}
+
+/*Files*/ 
+.content {
+    display: flex;
+    gap: 20px;
+}
+@media (max-width: 767px) {
+    .content {
+        flex-direction: column-reverse;
+    }
+}
+.content .files {
+    flex-basis: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 20px;
+}
+.content .files > div {
+    background-color: white;
+    padding: 10px;
+}
+.files > div > i {
+    color: rgb(0 0 0 / 50%);
+}
+.files > div .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .files > div img {
+    width: 70px;
+    height: 80px;
+    margin-bottom: 15px;
+    transition: var(--main-duration);
+}
+.content .files > div:hover img {
+    transform: rotate(8deg);
+}
+
+.files > div div:last-of-type {
+    padding-top: 10px;
+    border-top: 1px solid var(--button-color);
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+
+/*Statistics*/
+.statistics {
+    flex-basis: 380px;
+    background-color: white;
+    padding: 20px;
+    height: fit-content;
+}
+@media (max-width: 767px) {
+    .statistics {
+        flex-basis: 100%;
+    }
+}
+.statistics > div {
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid var(--button-color);
+}
+.statistics > div:nth-of-type(2) {
+    border-color: green;
+}
+.statistics > div:nth-of-type(3) {
+    border-color: red;
+}
+.statistics > div:last-of-type {
+    border-color: goldenrod;
+}
+.statistics > div span {
+    font-size: 14px;
+}
+.statistics > div i {
+    background-color: rgb(23 135 224 / 25%);
+    color: var(--button-color);
+    padding: 10px;
+    margin-right: 10px;
+    height: fit-content;
+}
+.statistics > div:nth-of-type(2) i {
+    background-color: rgb(0 128 0 / 25%);
+    color: green;
+}
+.statistics > div:nth-of-type(3) i {
+    background-color: rgb(255 0 0 / 25%);
+    color: red;
+}
+.statistics > div:last-of-type i {
+    background-color: rgb(218 165 32 / 25%);
+    color: goldenrod;
+}
+.statistics > div > span {
+    margin-left: auto;
+}

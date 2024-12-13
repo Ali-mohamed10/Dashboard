@@ -1,0 +1,87 @@
+:root {
+    --hover-color: #f6f6f6;
+    --button-color: #1787e0;
+    --main-duration: 0.3s;
+    --section-BC: #ececec;
+    --p-color: #666;
+    --box-shadow: 10px 10px 15px #ddd;
+    --background: linear-gradient(to bottom, #33ccff , #ff99cc);
+    --hover-background: linear-gradient(to bottom,#209ac3 , #b56c90);
+    --color-project: #ff99cc;
+    --color-team: linear-gradient(to right, red, blue);
+    --color-1-team: red;
+    --color-2-team: blue;
+
+}
+
+/*Friends*/
+.friends {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 20px;
+}
+.friends > div {
+    background-color: white;
+    padding: 10px;
+    position: relative;
+}
+.friends > div > i {
+    background-color: #ddd;
+    color: rgb(0 0 0 / 50%);
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: var(--main-duration);
+}
+.friends > div > i:hover {
+    background-color: var(--button-color);
+    color: white;
+}
+.friends .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.friends > div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.friends > div ul {
+    padding: 10px;
+    line-height: 2;
+    border-bottom: 1px solid var(--button-color);
+    border-top: 1px solid var(--button-color);
+    border-radius: 0;
+    margin: 10px 0;
+    position: relative;
+}
+.friends > div ul li:nth-of-type(4) {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: blanchedalmond;
+    font-size: 50px;
+    font-weight: bold;
+}
+.friends > div ul i {
+    margin-right: 5px;
+}
+.friends > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.friends > div .links a:first-of-type {
+    display: inline-block;
+    background-image: var(--background);
+}
+.friends > div .links a:last-of-type {
+    display: inline-block;
+    background-image: var(--color-team);
+}
