@@ -1,3 +1,3 @@
-# My Project
-### Only HTML && CSS
-https://ali-mohamed10.github.io/Html-CSS-Dashboard/
+# Dashboard
+### HTML && CSS && JS
+https://ali-mohamed10.github.io/Dashboard/
