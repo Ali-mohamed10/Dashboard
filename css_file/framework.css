@@ -125,8 +125,8 @@ aside {
 }
 
 section {
-    flex-basis: 85%;
-    width: 100%;
+    flex-basis: 100%;
+    overflow: hidden;
 }
 aside h3 {
     width: fit-content;
@@ -172,7 +172,10 @@ aside a {
 }
 @media (max-width: 767px) {
     aside a {
-        margin: 5px;
+        margin: 10px auto;
+        padding: 5px;
+        width: 81%;
+        text-align: center;
     }
 }
 
@@ -271,6 +274,7 @@ header .notification img {
     min-height: 100vh;
     padding: 20px;
     overflow: hidden;
+    max-width: 100%;
 }
 .main-content h1 {
     color: white;
@@ -354,5 +358,3 @@ header .notification img {
     content: "\f058";
     left: 48px;
 }
-
-
