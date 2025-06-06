@@ -1,10 +1,74 @@
-
 window.addEventListener('load', function() {
     const loader = document.getElementById('loader-container');
     setTimeout(function() {
         loader.classList.add('hidden');
     }, 300);
 });
+
+/* Start Search */
+
+let searchInput = document.querySelector("[type='search']");
+let sections = document.querySelectorAll('.main-content > div > div, .projects');
+let sectionsArray = [];
+
+sections.forEach((se) => {
+    sectionsArray.push(se.classList[0]);
+});
+sectionsArray.pop();
+console.log(sectionsArray);
+
+
+let searchMenu = document.createElement("div");
+searchMenu.className = "searchMenu";
+document.body.appendChild(searchMenu);
+searchInput.after(searchMenu);
+
+for (let i = 0; i < sectionsArray.length; i++) {
+    let div = document.createElement("div");
+    let text = document.createTextNode(sectionsArray[i]);
+    div.appendChild(text);
+    searchMenu.appendChild(div);
+}
+
+
+let searchDiv = document.querySelectorAll(".searchMenu div");
+searchDiv.forEach((div) => div.style.display = "none");
+
+searchInput.addEventListener("input",function () {
+    if (searchInput.value === "") {
+        searchDiv.forEach((div) => div.style.display = "none");
+    }
+    searchDiv.forEach((div) => {
+        if (div.innerText[0].toUpperCase() === searchInput.value.charAt(0).toUpperCase()) {
+            div.style.display = "block";
+            div.addEventListener("click",function (e) {
+                searchInput.value = e.currentTarget.innerText;
+                searchDiv.forEach((div) => div.style.display = "none");
+                searchInput.focus();
+            });
+        }
+    });
+});
+
+document.addEventListener("click",function(e) {
+    if (e.currentTarget) {
+        
+    }
+})
+
+searchInput.addEventListener("search",function () {
+    if (searchInput.value !== "") {
+        let targetSection = document.querySelector(`.${searchInput.value.toLowerCase()}`);
+        window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: "smooth",
+        });
+    }
+});
+
+/* End Search */
+
+/* Start Animation Writer */
 
 const text = "Dashboard";
 const speed = 150; 
@@ -19,6 +83,10 @@ function typeWriter() {
     }
 }
 window.onload = setTimeout(typeWriter, 1000);
+
+/* End Animation Writer */
+
+/* Start Animation Sections */
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -62,3 +130,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+/* End Animation Sections */
