@@ -1,3 +1,18 @@
+:root {
+    --hover-color: #f6f6f6;
+    --button-color: #1787e0;
+    --main-duration: 0.3s;
+    --section-BC: #ececec;
+    --p-color: #666;
+    --box-shadow: 10px 10px 15px #ddd;
+    --background: linear-gradient(to bottom, #33ccff , #ff99cc);
+    --hover-background: linear-gradient(to bottom,#209ac3 , #b56c90);
+    --color-project: #ff99cc;
+    --color-team: linear-gradient(to right, red, blue);
+    --color-1-team: red;
+    --color-2-team: blue;
+
+}
 /*Dashboard*/
 /*Welcome*/
 .dashboard {
@@ -13,6 +28,28 @@
 .dashboard > div {
     padding: 20px;
 }
+.searchMenu {
+    position: absolute;
+    background-color: var(--color-project);
+    z-index: 3;
+    width: max-content;
+}
+.searchMenu div {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+.searchMenu div:hover {
+    background-color: #ddd;
+}
+
+.searchMenu div:first-child::before {
+    content: "";
+}
+
+
 .welcome {
     background-color: var(--section-BC);
     display: flex;
@@ -655,7 +692,6 @@ div:last-of-type::before {
 .projects table tr:nth-last-of-type(4) div {
     background-color: limegreen;
 }
-
 
 .projects table img {
     width: 25px;
