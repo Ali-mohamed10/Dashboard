@@ -13,6 +13,9 @@
     --color-2-team: blue;
 
 }
+header > div:first-child {
+    visibility: hidden;
+}
 /*site control*/
 .settings {
     gap: 20px;
