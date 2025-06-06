@@ -13,7 +13,9 @@
     --color-2-team: blue;
 
 }
-
+header > div:first-child {
+    visibility: hidden;
+}
 /*Files*/ 
 .content {
     display: flex;
