@@ -1,10 +1,11 @@
 # Dashboard Project
 
-A simple and modern dashboard web page. Built with HTML, CSS, and Font Awesome icons.
+A simple and modern dashboard web page. Built with HTML,JS,CSS, and Font Awesome icons.
 [Live Demo](https://ali-mohamed10.github.io/Dashboard/)
 
 ## Features
 - Sidebar with navigation links
+- Search bar to quickly find information on the dashboard
 - Welcome section with user info
 - Quick draft form
 - Yearly targets and statistics
