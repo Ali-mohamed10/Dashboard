@@ -1,7 +1,7 @@
 # Dashboard Project
 
 A simple and modern dashboard web page. Built with HTML,JS,CSS, and Font Awesome icons.
-[Live Demo](https://ali-mohamed10.github.io/Dashboard/)
+[Live Demo](https://dashboard-rust-zeta.vercel.app/)
 
 ## Features
 - Sidebar with navigation links
