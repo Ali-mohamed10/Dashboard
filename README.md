@@ -1,4 +1,5 @@
 # Dashboard Project
+![Project Screenshot](imgs-temp-4/Screenshot.png)
 
 A simple and modern dashboard web page. Built with HTML,JS,CSS, and Font Awesome icons.
 [Live Demo](https://dashboard-rust-zeta.vercel.app/)
